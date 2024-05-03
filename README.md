@@ -43,9 +43,9 @@ colección de postman, versión Java JDK 17,  base de datos a libre elección, s
 ## Tiempo
 Se estima que la duración del proyecto para gestión de vehículos de un parqueadero será de 4 meses 
 
-##Análisis de Stakeholders
+## Análisis de Stakeholders
 | Types of Stakeholders  | Name  | Description |
-| :------------ |:---------------:| |:---------------:|
+| :------------ |:---------------: |:---------------:|
 | Owners - Manager      | Propietario del Parqueadero | Representante legal de la compañía quien además de ello patrocina el proyecto, tiene un interés directo con la eficiencia del sistema planteado |
 | Customers      | Clientes del Parqueadero        |   Personas que estaciona su vehículo en dicho parqueadero asumiendo el costo del mismo |
 | Employees | Empleados del parqueadero   |    Trabajadores encargados de la gestión y supervisión de los vehículos y el funcionamiento general del estacionamiento |
