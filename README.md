@@ -3,8 +3,28 @@ Parking project
 
 ## Tabla de Contenidos
 
+
 1. [Objetivo general](#objetivo-general)
-2. [Desarrollo del Microservicio](#desarrollo-del-microservicio)
+2. [Problema](#problema)
+3. [Bloqueos, restricciones](#bloqueos,-restricciones)
+2. [Reglas de negocio](#reglas-de-negocio)
+2. [Recursos](#recursos)
+2. [Tiempo](#tiempo)
+2. [Análisis de Stakeholders](#análisis-de-Stakeholders)
+2. [Requisitos funcionales](#requisitos-funcionales)
+2. [Requisitos no funcionales](#requisitos-no-funcionales)
+2. [Historias de Usuario](#historias-de-Usuario)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+2. [Problema](#problema)
+3. 
+4. 
+5. 
     - [Funcionalidades](#funcionalidades)
     - [Enfoque de Desarrollo](#enfoque-de-desarrollo)
     - [Objetivos de Aprendizaje](#objetivos-de-aprendizaje)
