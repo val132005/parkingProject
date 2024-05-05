@@ -22,7 +22,6 @@ Parking project
     - [RF003 - Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
     - [RF004 - Eliminación de vehículos](#rf001-eliminación-de-vehículos)
     - [RF005 - Actualización de vehículos](#rf001-actualización-de-vehículos)
-
 12. [Restricciones de validación](#restricciones-de-validación)
 
 
@@ -35,45 +34,29 @@ Parking project
 <summary><a href="#fase-de-diseño">Fase de diseño</a></summary>
     
 1. [Diagramas de casos de uso](#diagramas-de-casos-de-uso)
-    - [RF001 - Registro de vehículos](#rf001-registro-de-vehículos)
-    - [RF002 - Visualización de vehículos](#rf001-visualización-de-vehículos)
-    - [RF003 - Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
-    - [RF004 - Eliminación de vehículos](#rf001-eliminación-de-vehículos)
-    - [RF005 - Actualización de vehículos](#rf001-actualización-de-vehículos)
+    - [Diagramas de casos de uso registro de vehículos](#diagramas-de-casos-de-uso-registro-de-vehículos)
+    - [Diagramas de casos de uso visualización de vehículos](#diagramas-de-casos-de-uso-visualización-de-vehículos)
+    - [Diagramas de casos de uso visualización de vehículos específicos](#diagramas-de-casos-de-uso-visualización-de-vehículos-específicos)
+    - [Diagramas de casos de uso eliminación de vehículos](#diagramas-de-casos-de-uso-eliminación-de-vehículos)
+    - [Diagramas de casos de uso actualización de vehículos](#diagramas-de-casos-de-uso-actualización-de-vehículos)
 3. [Diagramas de procesos](#diagramas-de-procesos)
-4. [Diagramas de secuencia](#diagramas-de-secuencia)
-5. [Diagrama de despliegue](#diagrama-de-despliegue)
-6. [Wireframes](#wireframes)
+    - [Diagramas de procesosregistro de vehículos](#diagramas-de-procesos-registro-de-vehículos)
+    - [Diagramas de procesos visualización de vehículos](#diagramas-de-procesos-visualización-de-vehículos)
+    - [Diagramas de procesos visualización de vehículos específicos](#diagramas-de-procesos-visualización-de-vehículos-específicos)
+    - [Diagramas de procesoseliminación de vehículos](#diagramas-de-procesos-eliminación-de-vehículos)
+    - [Diagramas de procesos actualización de vehículos](#diagramas-de-procesos-actualización-de-vehículos)
+5. [Diagramas de secuencia](#diagramas-de-secuencia)
+    - [Diagramas de secuencia registro de vehículos](#diagramas-de-secuencia-registro-de-vehículos)
+    - [Diagramas de secuencia visualización de vehículos](#diagramas-de-secuencia-visualización-de-vehículos)
+    - [Diagramas de secuencia visualización de vehículos específicos](#diagramas-de-secuencia-visualización-de-vehículos-específicos)
+    - [Diagramas de secuencia eliminación de vehículos](#diagramas-de-secuencia-eliminación-de-vehículos)
+    - [Diagramas de secuencia actualización de vehículos](#diagramas-de-secuencia-actualización-de-vehículos)
+7. [Diagrama de despliegue](#diagrama-de-despliegue)
+8. [Wireframes](#wireframes)
 
 
 
 </details>
-
-
-1. [Objetivo general](#objetivo-general)
-2. [Problema](#problema)
-3. [Bloqueos, restricciones](#bloqueos-restricciones)
-2. [Reglas de negocio](#reglas-de-negocio)
-2. [Recursos](#recursos)
-2. [Tiempo](#tiempo)
-2. [Análisis de Stakeholders](#análisis-de-Stakeholders)
-2. [Requisitos funcionales](#requisitos-funcionales)
-2. [Requisitos no funcionales](#requisitos-no-funcionales)
-2. [Historias de Usuario](#historias-de-Usuario)
-2. [Restricciones de validación](#restricciones-de-validación)
-2. [Problema](#problema)
-2. [Problema](#problema)
-2. [Problema](#problema)
-2. [Problema](#problema)
-2. [Problema](#problema)
-2. [Problema](#problema)
-2. [Problema](#problema)
-3. 
-4. 
-5. 
-    - [Funcionalidades](#funcionalidades)
-    - [Enfoque de Desarrollo](#enfoque-de-desarrollo)
-    - [Objetivos de Aprendizaje](#objetivos-de-aprendizaje)
 
 
 # Fase de análisis
@@ -323,56 +306,63 @@ Si el vehículo no se encuentra registrado se mostrará un mensaje de error info
 
 ## Diagramas de casos de uso
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaGeneral.png)
-### RF001 - Registro de vehículos 
+### Diagramas de casos de uso registro de vehículos 
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaRegistro.png)
-### RF002 - Visualización de vehículos  
+### Diagramas de casos de uso visualización de vehículos  
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaConsultaGeneral.png)
-### RF003 - Visualización de vehículos específicos
+### Diagramas de casos de uso visualización de vehículos específicos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaConsultaIndividual.png)
-### RF004 - Eliminación de vehículos
+### Diagramas de casos de uso eliminación de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaEliminacion.png)
-### RF005 - Actualización de vehículos
+### Diagramas de casos de uso actualización de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaModificacion.png)
 
 ## Diagramas de procesos
-### RF001 - Registro de vehículos 
+### Diagramas de procesos registro de vehículos 
 ![](https://github.com/val132005/parkingProject/blob/main/Images/procesos/procesosDiagramaRegistro.png)
-### RF002 - Visualización de vehículos  
+### Diagramas de procesos visualización de vehículos  
 ![](https://github.com/val132005/parkingProject/blob/main/Images/procesos/procesosDiagramaConsultaGeneral.png)
-### RF003 - Visualización de vehículos específicos
+### Diagramas de procesos visualización de vehículos específicos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/procesos/procesosDiagramaConsultaIndividual.png)
-### RF004 - Eliminación de vehículos
+### Diagramas de procesos eliminación de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/procesos/procesosDiagramaEliminacion.png)
-### RF005 - Actualización de vehículos
+### Diagramas de procesos actualización de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/procesos/procesosDiagramaModificacion.png)
 
 ## Diagramas de secuencia
-### RF001 - Registro de vehículos 
+### Diagramas de secuencia registro de vehículos 
 ![](https://github.com/val132005/parkingProject/blob/main/Images/secuencia/secuenciaDiagramaRegistro.png)
-### RF002 - Visualización de vehículos  
+### Diagramas de secuencia visualización de vehículos  
 ![](https://github.com/val132005/parkingProject/blob/main/Images/secuencia/secuenciaDiagramaConsultaGeneral.png)
-### RF003 - Visualización de vehículos específicos
+### Diagramas de secuencia visualización de vehículos específicos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/secuencia/secuenciaDiagramaConsultaIndividual.png)
-### RF004 - Eliminación de vehículos
+### Diagramas de secuencia eliminación de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/secuencia/secuenciaDiagramaEliminacion.png)
-### RF005 - Actualización de vehículos
+### Diagramas de secuencia actualización de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/secuencia/secuenciaDiagramaModificacion.png)
 
 ## Diagrama de despliegue
 ![](https://github.com/val132005/parkingProject/blob/main/Images/despliegue/diagramaDeDespliegue.png)
 
 ## Wireframes
+### Inicio
+![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesGenral.png)
+### Registro
+![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesRegistro1.png)
+![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesRegistro2.png)
+### Listado de vehículos
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesConsultaGeneral1.png)
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesConsultaGeneral2.png)
+### Consulta específica
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesConsultaIndividual1.png)
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesConsultaIndividual2.png)
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesConsultaIndividual3.png)
+### Eliminación
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesEliminacion1.png)
-![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesGenral.png)
+### Actualización
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesModificacion1.png)
 ![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesModificacion2.png)
-![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesRegistro1.png)
-![](https://github.com/val132005/parkingProject/blob/main/Images/wireframes/wireframesRegistro2.png)
+
 
 
 
