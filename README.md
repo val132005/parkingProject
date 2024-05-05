@@ -17,11 +17,11 @@ Parking project
 8. [Requisitos funcionales](#requisitos-funcionales)
 9. [Requisitos no funcionales](#requisitos-no-funcionales)
 10. [Historias de Usuario](#historias-de-Usuario)
-    - [RF001 - Registro de vehículos](#rf001-registro-de-vehículos)
-    - [RF002 - Visualización de vehículos](#rf001-visualización-de-vehículos)
-    - [RF003 - Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
-    - [RF004 - Eliminación de vehículos](#rf001-eliminación-de-vehículos)
-    - [RF005 - Actualización de vehículos](#rf001-actualización-de-vehículos)
+    - [RF001 Registro de vehículos](#rf001-registro-de-vehículos)
+    - [RF002 Visualización de vehículos](#rf001-visualización-de-vehículos)
+    - [RF003 Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
+    - [RF004 Eliminación de vehículos](#rf001-eliminación-de-vehículos)
+    - [RF005 Actualización de vehículos](#rf001-actualización-de-vehículos)
 12. [Restricciones de validación](#restricciones-de-validación)
 
 
@@ -128,7 +128,7 @@ RNF006. Se recomienda el uso de patrones de software, principios de clean code, 
 RNF007. Se recomienda la realización de pruebas unitarias utilizando JUnit o cualquier otro framework de testing desead
 
 ## Historias de Usuario
-### RF001 - Registro de vehículos 
+### RF001 Registro de vehículos 
 
 ### Descripción  
 
@@ -162,7 +162,7 @@ Después de llenar todos los campos va a poder finalizar el proceso al seleccion
 |8|El proceso de registro no se completa con éxito por errores de validación |Se selecciona “Registrar”|El sistema debe mostrar un mensaje de alerta para para informar al usuario del tipo de error 
 |9|El usuario ha registrado exitosamente el vehículo|Accede a la lista de vehículos |La lista de vehículos debe actualizarse mostrando este nuevo registro 
 
-### RF002 - Visualización de vehículos  
+### RF002 Visualización de vehículos  
 
 ### Descripción  
 Como usuario del parqueadero
@@ -179,7 +179,7 @@ El usuario contará con un apartado en el cual tendrá acceso a una lista de tod
 |1|El usuario desea visualizar la lista de vehículos registrados|Accede al respectivo apartado |Debería visualizar una lista completa de todos los vehículos registrados en el sistema
 |2|La lista de vehículos se actualiza regularmente|El usuario está visualizando la lista|La lista debe actualizarse automáticamente para reflejar cualquier cambio reciente en la base de datos
 
-### RF003 - Visualización de vehículos específicos
+### RF003 Visualización de vehículos específicos
 
 ### Descripción 
 Como usuario del parqueadero
@@ -208,7 +208,7 @@ Si el vehículo no se encuentra registrado se mostrará un mensaje de error info
 |6|El usuario desea obtener información detallada de un vehículo no registrado|Selecciona la opción "Consultar"|El sistema debe mostrar un mensaje de error informando al usuario que el vehículo no está registrado|La información ingresada puede ser editada para un nuevo intento
 |7|El proceso de consulta no se completa con éxito por errores de validación|Selecciona la opción "Consultar"|El sistema debe mostrar un mensaje de alerta para para informar al usuario del tipo de error 
 
-### RF004 - Eliminación de vehículos
+### RF004 Eliminación de vehículos
 
 ### Descripción 
 Como usuario del parqueadero
@@ -228,7 +228,7 @@ El usuario podrá ingresar en un campo de entrada de datos la placa del vehícul
 |4|El usuario quiere confirmar la eliminación del vehículo|El usuario selecciona “Aceptar”|El sistema debe permitir la finalización del proceso y muestra el mensaje de éxito
 |5|El vehículo se ha eliminado con éxito|El usuario visualiza la lista de registros|La lista debe estar actualizada y el registro que se elimino previamente no debe visualizarse
 
-### RF005 - Actualización de vehículos
+### RF005 Actualización de vehículos
 ### Descripción 
 Como usuario del parqueadero
 Yo quiero actualizar la información de los vehículos
