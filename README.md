@@ -18,10 +18,10 @@ Parking project
 9. [Requisitos no funcionales](#requisitos-no-funcionales)
 10. [Historias de Usuario](#historias-de-Usuario)
     - [RF001 Registro de vehículos](#rf001-registro-de-vehículos)
-    - [RF002 Visualización de vehículos](#rf001-visualización-de-vehículos)
-    - [RF003 Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
-    - [RF004 Eliminación de vehículos](#rf001-eliminación-de-vehículos)
-    - [RF005 Actualización de vehículos](#rf001-actualización-de-vehículos)
+    - [RF002 Visualización de vehículos](#rf002-visualización-de-vehículos)
+    - [RF003 Visualización de vehículos específicos](#rf003-visualización-de-vehículos-específicos)
+    - [RF004 Eliminación de vehículos](#rf004-eliminación-de-vehículos)
+    - [RF005 Actualización de vehículos](#rf005-actualización-de-vehículos)
 12. [Restricciones de validación](#restricciones-de-validación)
 
 
@@ -40,10 +40,10 @@ Parking project
     - [Diagramas de casos de uso eliminación de vehículos](#diagramas-de-casos-de-uso-eliminación-de-vehículos)
     - [Diagramas de casos de uso actualización de vehículos](#diagramas-de-casos-de-uso-actualización-de-vehículos)
 3. [Diagramas de procesos](#diagramas-de-procesos)
-    - [Diagramas de procesosregistro de vehículos](#diagramas-de-procesos-registro-de-vehículos)
+    - [Diagramas de procesos registro de vehículos](#diagramas-de-procesos-registro-de-vehículos)
     - [Diagramas de procesos visualización de vehículos](#diagramas-de-procesos-visualización-de-vehículos)
     - [Diagramas de procesos visualización de vehículos específicos](#diagramas-de-procesos-visualización-de-vehículos-específicos)
-    - [Diagramas de procesoseliminación de vehículos](#diagramas-de-procesos-eliminación-de-vehículos)
+    - [Diagramas de procesos eliminación de vehículos](#diagramas-de-procesos-eliminación-de-vehículos)
     - [Diagramas de procesos actualización de vehículos](#diagramas-de-procesos-actualización-de-vehículos)
 5. [Diagramas de secuencia](#diagramas-de-secuencia)
     - [Diagramas de secuencia registro de vehículos](#diagramas-de-secuencia-registro-de-vehículos)
@@ -52,10 +52,14 @@ Parking project
     - [Diagramas de secuencia eliminación de vehículos](#diagramas-de-secuencia-eliminación-de-vehículos)
     - [Diagramas de secuencia actualización de vehículos](#diagramas-de-secuencia-actualización-de-vehículos)
 7. [Diagrama de despliegue](#diagrama-de-despliegue)
-8. [Wireframes](#wireframes)
-
-
-
+9. [Wireframes](#wireframes)
+    - [Inicio](#inicio)
+    - [Registro](#registro)
+    - [Listado de vehículos](#listado-de-vehículos)
+    - [Consulta específica](#consulta-específica)
+    - [Eliminación](#eliminación)
+    - [Actualización](#actualización)
+   
 </details>
 
 
