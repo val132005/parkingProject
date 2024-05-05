@@ -3,10 +3,12 @@ Parking project
 
 ## Tabla de Contenidos
 
-
+<details>
+<summary><a href="#fase-de-análisis">Fase de Análisis</a></summary>
+    
 1. [Objetivo general](#objetivo-general)
 2. [Problema](#problema)
-3. [Bloqueos, restricciones](#bloqueos,-restricciones)
+3. [Bloqueos, restricciones](#bloqueos-restricciones)
 2. [Reglas de negocio](#reglas-de-negocio)
 2. [Recursos](#recursos)
 2. [Tiempo](#tiempo)
@@ -14,7 +16,23 @@ Parking project
 2. [Requisitos funcionales](#requisitos-funcionales)
 2. [Requisitos no funcionales](#requisitos-no-funcionales)
 2. [Historias de Usuario](#historias-de-Usuario)
+2. [Restricciones de validación](#restricciones-de-validación)
+
+
+</details>
+
+
+1. [Objetivo general](#objetivo-general)
 2. [Problema](#problema)
+3. [Bloqueos, restricciones](#bloqueos-restricciones)
+2. [Reglas de negocio](#reglas-de-negocio)
+2. [Recursos](#recursos)
+2. [Tiempo](#tiempo)
+2. [Análisis de Stakeholders](#análisis-de-Stakeholders)
+2. [Requisitos funcionales](#requisitos-funcionales)
+2. [Requisitos no funcionales](#requisitos-no-funcionales)
+2. [Historias de Usuario](#historias-de-Usuario)
+2. [Restricciones de validación](#restricciones-de-validación)
 2. [Problema](#problema)
 2. [Problema](#problema)
 2. [Problema](#problema)
@@ -30,6 +48,7 @@ Parking project
     - [Objetivos de Aprendizaje](#objetivos-de-aprendizaje)
 
 
+# Fase de análisis
 ## Objetivo general:
 Desarrollar un microservicio que gestione eficientemente el proceso de registro de vehículos en un parqueadero.
 Este microservicio permitirá agregar, borrar, actualizar información y mostrar la lista de vehículos registrados. Además, se enfocará en adquirir los conocimientos técnicos y habilidades blandas que debe poseer un desarrollador Java back-end Junior.
@@ -271,6 +290,8 @@ Si el vehículo no se encuentra registrado se mostrará un mensaje de error info
 - Debe tener un formato especifico: HH:MM AM/PM
 - Puede contener caracteres especiales como “:”
 - Admite espacios vacíos
+
+# Fase de diseño
 
 ## Diagramas de casos de uso
 ![](https://github.com/val132005/parkingProject/blob/main/Images/casosDeUso/casosDeUsoDiagramaGeneral.png)
