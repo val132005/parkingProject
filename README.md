@@ -4,19 +4,47 @@ Parking project
 ## Tabla de Contenidos
 
 <details>
+    
 <summary><a href="#fase-de-análisis">Fase de Análisis</a></summary>
     
 1. [Objetivo general](#objetivo-general)
 2. [Problema](#problema)
 3. [Bloqueos, restricciones](#bloqueos-restricciones)
-2. [Reglas de negocio](#reglas-de-negocio)
-2. [Recursos](#recursos)
-2. [Tiempo](#tiempo)
-2. [Análisis de Stakeholders](#análisis-de-Stakeholders)
-2. [Requisitos funcionales](#requisitos-funcionales)
-2. [Requisitos no funcionales](#requisitos-no-funcionales)
-2. [Historias de Usuario](#historias-de-Usuario)
-2. [Restricciones de validación](#restricciones-de-validación)
+4. [Reglas de negocio](#reglas-de-negocio)
+5. [Recursos](#recursos)
+6. [Tiempo](#tiempo)
+7. [Análisis de Stakeholders](#análisis-de-Stakeholders)
+8. [Requisitos funcionales](#requisitos-funcionales)
+9. [Requisitos no funcionales](#requisitos-no-funcionales)
+10. [Historias de Usuario](#historias-de-Usuario)
+    - [RF001 - Registro de vehículos](#rf001-registro-de-vehículos)
+    - [RF002 - Visualización de vehículos](#rf001-visualización-de-vehículos)
+    - [RF003 - Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
+    - [RF004 - Eliminación de vehículos](#rf001-eliminación-de-vehículos)
+    - [RF005 - Actualización de vehículos](#rf001-actualización-de-vehículos)
+
+12. [Restricciones de validación](#restricciones-de-validación)
+
+
+</details>
+
+
+
+<details>
+
+<summary><a href="#fase-de-diseño">Fase de diseño</a></summary>
+    
+1. [Diagramas de casos de uso](#diagramas-de-casos-de-uso)
+    - [RF001 - Registro de vehículos](#rf001-registro-de-vehículos)
+    - [RF002 - Visualización de vehículos](#rf001-visualización-de-vehículos)
+    - [RF003 - Visualización de vehículos específicos](#rf001-visualización-de-vehículos-específicos)
+    - [RF004 - Eliminación de vehículos](#rf001-eliminación-de-vehículos)
+    - [RF005 - Actualización de vehículos](#rf001-actualización-de-vehículos)
+3. [Diagramas de procesos](#diagramas-de-procesos)
+4. [Diagramas de secuencia](#diagramas-de-secuencia)
+5. [Diagrama de despliegue](#diagrama-de-despliegue)
+6. [Wireframes](#wireframes)
+
 
 
 </details>
@@ -168,7 +196,7 @@ El usuario contará con un apartado en el cual tendrá acceso a una lista de tod
 |1|El usuario desea visualizar la lista de vehículos registrados|Accede al respectivo apartado |Debería visualizar una lista completa de todos los vehículos registrados en el sistema
 |2|La lista de vehículos se actualiza regularmente|El usuario está visualizando la lista|La lista debe actualizarse automáticamente para reflejar cualquier cambio reciente en la base de datos
 
-### RF003 - Visualización de vehículos especidifcos
+### RF003 - Visualización de vehículos específicos
 
 ### Descripción 
 Como usuario del parqueadero
