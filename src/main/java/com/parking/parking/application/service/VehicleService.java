@@ -22,18 +22,26 @@ public class VehicleService implements VehicleServicePort {
     @Override
     public Vehicle findByPlate(String plate) {
         logger.debug("Finding vehicle by plate: {}", plate);
-        return persistencePort.findByPlate(plate)
+        long startTime = System.currentTimeMillis();
+        Vehicle vehicle = persistencePort.findByPlate(plate)
                 .orElseThrow(() -> {
                     logger.warn("Vehicle not found for plate: {}", plate);
                     return new VehicleNotFoundException();
                 });
+        long endTime = System.currentTimeMillis();
+        logger.info("Found vehicle {} in {} ms", vehicle, (endTime - startTime));
+        return vehicle;
 
     }
 
     @Override
     public List<Vehicle> findAll() {
         logger.debug("Finding all vehicles");
-        return persistencePort.findAll();
+        long startTime = System.currentTimeMillis();
+        List<Vehicle> vehicles = persistencePort.findAll();
+        long endTime = System.currentTimeMillis();
+        logger.info("Found {} vehicles in {} ms", vehicles.size(), (endTime - startTime));
+        return vehicles;
     }
 
     @Override
@@ -49,7 +57,10 @@ public class VehicleService implements VehicleServicePort {
     @Override
     public Vehicle update(String plate, Vehicle vehicle) {
         logger.debug("Updating vehicle with plate: {}, new details: {}", plate, vehicle);
-        return persistencePort.findByPlate(plate)
+
+        long startTime = System.currentTimeMillis();
+        Vehicle updatedVehicle = persistencePort.findByPlate(plate)
+
                 .map(saveVehicle ->{
                     saveVehicle.setPlate(vehicle.getPlate());
                     saveVehicle.setColor(vehicle.getColor());
@@ -65,16 +76,22 @@ public class VehicleService implements VehicleServicePort {
                     logger.warn("Vehicle not found for update with plate: {}", plate);
                     return new VehicleNotFoundException();
                 });
+        long endTime = System.currentTimeMillis();
+        logger.info("Updated vehicle {} in {} ms", updatedVehicle, (endTime - startTime));
+        return updatedVehicle;
     }
 
     @Override
     public void deleteByPlate(String plate) {
         logger.debug("Deleting vehicle by plate: {}", plate);
+        long startTime = System.currentTimeMillis();
         if (persistencePort.findByPlate(plate).isEmpty()){
             logger.warn("Vehicle not found for deletion with plate: {}", plate);
             throw new VehicleNotFoundException();
         }
         persistencePort.deleteByPlate(plate);
+        long endTime = System.currentTimeMillis();
+        logger.info("Deleted vehicle with plate {} in {} ms", plate, (endTime - startTime));
 
     }
 }

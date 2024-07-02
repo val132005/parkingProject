@@ -27,7 +27,12 @@ public class VehicleRestAdapter {
     @GetMapping("/ListadoDeVehiculos")
     public List<VehicleResponse> findAll(){
         logger.info("Fetching all vehicles");
-        return vehicleRestMapper.toVehicleResponseList(vehicleServicePort.findAll());
+        long startTime = System.currentTimeMillis();
+        List<VehicleResponse> vehicles = vehicleRestMapper.toVehicleResponseList(vehicleServicePort.findAll());
+        long endTime = System.currentTimeMillis();
+        logger.info("Fetched {} vehicles in {} ms", vehicles.size(), (endTime - startTime));
+        return vehicles;
+
     }
 
     @GetMapping("/ConsultaEspecifica")
@@ -55,7 +60,10 @@ public class VehicleRestAdapter {
     @DeleteMapping("/ConsultaEspecifica/eliminacion")
     public void delete(@PathVariable String plate){
         logger.info("Deleting vehicle by plate: {}", plate);
+        long startTime = System.currentTimeMillis();
         vehicleServicePort.deleteByPlate(plate);
+        long endTime = System.currentTimeMillis();
+        logger.info("Deleted vehicle with plate {} in {} ms", plate, (endTime - startTime));
     }
 
 }
