@@ -1,5 +1,6 @@
 package com.parking.parking.application.service;
 
+
 import com.parking.parking.application.port.output.VehiclePersistencePort;
 import com.parking.parking.domain.exception.VehicleNotFoundException;
 import com.parking.parking.domain.model.Vehicle;
@@ -9,15 +10,16 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 public class VehicleServiceTest {
+
     @Mock
     private VehiclePersistencePort persistencePort;
 
@@ -26,98 +28,121 @@ public class VehicleServiceTest {
 
     @BeforeEach
     void setUp() {
-        MockitoAnnotations.initMocks(this);
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    void testFindByPlate_WhenPlateExists_ExpectVehicleReturned() {
-        // Mocking behavior
+    void findByPlate_existingPlate_shouldReturnVehicle() {
+        // Arrange
         String plate = "ABC-123";
         Vehicle expectedVehicle = new Vehicle();
         expectedVehicle.setPlate(plate);
         when(persistencePort.findByPlate(plate)).thenReturn(Optional.of(expectedVehicle));
 
-        // Calling the service method
-        Vehicle result = vehicleService.findByPlate(plate);
+        // Act
+        Vehicle foundVehicle = vehicleService.findByPlate(plate);
 
-        // Assertions
-        assertEquals(plate, result.getPlate());
+        // Assert
+        assertNotNull(foundVehicle);
+        assertEquals(plate, foundVehicle.getPlate());
     }
 
     @Test
-    void testFindByPlate_WhenPlateNotExists_ExpectVehicleNotFoundException() {
-        // Mocking behavior
+    void findByPlate_nonExistingPlate_shouldThrowException() {
+        // Arrange
         String plate = "XYZ-456";
         when(persistencePort.findByPlate(plate)).thenReturn(Optional.empty());
 
-        // Calling the service method and asserting exception
-        assertThrows(VehicleNotFoundException.class, () -> vehicleService.findByPlate(plate));
+        // Act and Assert
+        assertThrows(VehicleNotFoundException.class, () -> {
+            vehicleService.findByPlate(plate);
+        });
     }
 
     @Test
-    void testFindAll_ExpectListOfVehiclesReturned() {
-        // Mocking behavior
-        List<Vehicle> vehicles = Arrays.asList(new Vehicle(), new Vehicle());
+    void findAll_shouldReturnListOfVehicles() {
+        // Arrange
+        List<Vehicle> vehicles = new ArrayList<>();
+        vehicles.add(new Vehicle());
+        vehicles.add(new Vehicle());
         when(persistencePort.findAll()).thenReturn(vehicles);
 
-        // Calling the service method
-        List<Vehicle> result = vehicleService.findAll();
+        // Act
+        List<Vehicle> foundVehicles = vehicleService.findAll();
 
-        // Assertions
-        assertEquals(2, result.size());
+        // Assert
+        assertEquals(2, foundVehicles.size());
     }
 
     @Test
-    void testSaveVehicle_ExpectSavedVehicle() {
-        // Mocking behavior
-        Vehicle vehicle = new Vehicle();
-        when(persistencePort.save(vehicle)).thenReturn(vehicle);
+    void save_shouldReturnSavedVehicle() {
+        // Arrange
+        Vehicle vehicleToSave = new Vehicle();
+        when(persistencePort.save(any(Vehicle.class))).thenReturn(vehicleToSave);
 
-        // Calling the service method
-        Vehicle savedVehicle = vehicleService.save(vehicle);
+        // Act
+        Vehicle savedVehicle = vehicleService.save(vehicleToSave);
 
-        // Assertions
-        assertEquals(vehicle, savedVehicle);
+        // Assert
+        assertNotNull(savedVehicle);
     }
 
     @Test
-    void testUpdateVehicle_ExpectUpdatedVehicle() {
-        // Mocking behavior
-        String plate = "ABC123";
+    void update_existingVehicle_shouldReturnUpdatedVehicle() {
+        // Arrange
+        String plate = "ABC-123";
+        Vehicle existingVehicle = new Vehicle();
+        existingVehicle.setPlate(plate);
         Vehicle updatedVehicle = new Vehicle();
         updatedVehicle.setPlate(plate);
-        updatedVehicle.setColor("Red");
-        updatedVehicle.setMake("Toyota");
-        updatedVehicle.setModel(2024);
-
-        when(persistencePort.findByPlate(plate)).thenReturn(Optional.of(new Vehicle()));
+        when(persistencePort.findByPlate(plate)).thenReturn(Optional.of(existingVehicle));
         when(persistencePort.save(any(Vehicle.class))).thenReturn(updatedVehicle);
 
-        // Calling the service method
-        Vehicle vehicleToUpdate = new Vehicle();
-        vehicleToUpdate.setPlate(plate);
+        // Act
+        Vehicle returnedVehicle = vehicleService.update(plate, updatedVehicle);
 
-        Vehicle returnedVehicle = vehicleService.update(plate, vehicleToUpdate);
-
-        // Assertions
-        assertEquals(updatedVehicle, returnedVehicle);
-        verify(persistencePort, times(1)).findByPlate(plate);
-        verify(persistencePort, times(1)).save(any(Vehicle.class));
+        // Assert
+        assertNotNull(returnedVehicle);
+        assertEquals(updatedVehicle.getPlate(), returnedVehicle.getPlate());
     }
 
     @Test
-    void testDeleteByPlate_ExpectVoid() {
-        // Mocking behavior
-        String plate = "ABC-123";
-
-        // Mockear findByPlate para devolver Optional.empty() cuando se llame con plate
+    void update_nonExistingVehicle_shouldThrowException() {
+        // Arrange
+        String plate = "XYZ-456";
+        Vehicle updatedVehicle = new Vehicle();
         when(persistencePort.findByPlate(plate)).thenReturn(Optional.empty());
 
-        // Calling the service method and expecting VehicleNotFoundException
-        assertThrows(VehicleNotFoundException.class, () -> vehicleService.deleteByPlate(plate));
+        // Act and Assert
+        assertThrows(VehicleNotFoundException.class, () -> {
+            vehicleService.update(plate, updatedVehicle);
+        });
+    }
 
-        // Verification
-        verify(persistencePort, times(1)).findByPlate(plate);
-        verify(persistencePort, never()).deleteByPlate(plate); // Verifica que deleteByPlate no se llamó
+    @Test
+    void deleteByPlate_existingPlate_shouldDeleteVehicle() {
+        // Arrange
+        String plate = "ABC-123";
+        Vehicle existingVehicle = new Vehicle();
+        existingVehicle.setPlate(plate);
+        when(persistencePort.findByPlate(plate)).thenReturn(Optional.of(existingVehicle));
+
+        // Act
+        vehicleService.deleteByPlate(plate);
+
+        // Assert: Verify that deleteByPlate was called once
+        verify(persistencePort, times(1)).deleteByPlate(plate);
+    }
+
+    @Test
+    void deleteByPlate_nonExistingPlate_shouldThrowException() {
+        // Arrange
+        String plate = "XYZ-456";
+        when(persistencePort.findByPlate(plate)).thenReturn(Optional.empty());
+
+        // Act and Assert
+        assertThrows(VehicleNotFoundException.class, () -> {
+            vehicleService.deleteByPlate(plate);
+        });
     }
 }

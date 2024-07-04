@@ -59,23 +59,23 @@ public class VehicleService implements VehicleServicePort {
         logger.debug("Updating vehicle with plate: {}, new details: {}", plate, vehicle);
 
         long startTime = System.currentTimeMillis();
-        Vehicle updatedVehicle = persistencePort.findByPlate(plate)
-
-                .map(saveVehicle ->{
-                    saveVehicle.setPlate(vehicle.getPlate());
-                    saveVehicle.setColor(vehicle.getColor());
-                    saveVehicle.setMake(vehicle.getMake());
-                    saveVehicle.setModel(vehicle.getModel());
-                    saveVehicle.setDayOfEntry(vehicle.getDayOfEntry());
-                    saveVehicle.setDayOfDeparture(vehicle.getDayOfDeparture());
-                    saveVehicle.setTimeOfEntry(vehicle.getTimeOfEntry());
-                    saveVehicle.setTimeOfDeparture(vehicle.getTimeOfDeparture());
-                    return persistencePort.save(saveVehicle);
-                })
+        Vehicle existingVehicle = persistencePort.findByPlate(plate)
                 .orElseThrow(() -> {
                     logger.warn("Vehicle not found for update with plate: {}", plate);
                     return new VehicleNotFoundException();
                 });
+
+        existingVehicle.setPlate(vehicle.getPlate());
+        existingVehicle.setColor(vehicle.getColor());
+        existingVehicle.setMake(vehicle.getMake());
+        existingVehicle.setModel(vehicle.getModel());
+        existingVehicle.setDayOfEntry(vehicle.getDayOfEntry());
+        existingVehicle.setDayOfDeparture(vehicle.getDayOfDeparture());
+        existingVehicle.setTimeOfEntry(vehicle.getTimeOfEntry());
+        existingVehicle.setTimeOfDeparture(vehicle.getTimeOfDeparture());
+
+        Vehicle updatedVehicle = persistencePort.save(existingVehicle);
+
         long endTime = System.currentTimeMillis();
         logger.info("Updated vehicle {} in {} ms", updatedVehicle, (endTime - startTime));
         return updatedVehicle;
